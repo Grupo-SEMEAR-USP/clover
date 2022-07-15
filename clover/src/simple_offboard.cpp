@@ -862,7 +862,7 @@ bool land(std_srvs::Trigger::Request& req, std_srvs::Trigger::Response& res)
 }
 
 bool stop(Stop::Request& req, Stop::Response& res) {
-	return serve(RATES, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, "", NAN, res.success, res.message);
+	return serve(NONE, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, NAN, "", NAN, res.success, res.message);
 }
 
 
@@ -942,7 +942,7 @@ int main(int argc, char **argv)
 	auto sa_serv = nh.advertiseService("set_attitude", &setAttitude);
 	auto sr_serv = nh.advertiseService("set_rates", &setRates);
 	auto ld_serv = nh.advertiseService("land", &land);
-	auto ld_serv = nh.advertiseService("stop", &stop);
+	auto st_serv = nh.advertiseService("stop", &stop);
 
 	// Setpoint timer
 	setpoint_timer = nh.createTimer(ros::Duration(1 / nh_priv.param("setpoint_rate", 30.0)), &publishSetpoint, false, false);
