@@ -33,7 +33,7 @@ add_library(sim_leds src/sim_leds.cpp)
 
 target_include_directories(sim_leds PRIVATE ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS})
 target_link_libraries(sim_leds PRIVATE ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
-target_compile_options(sim_leds PRIVATE -std=c++11)
+target_compile_options(sim_leds PRIVATE -std=c++17)
 
 add_dependencies(sim_leds ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
@@ -41,7 +41,7 @@ add_library(sim_leds_controller src/sim_leds_controller.cpp)
 
 target_include_directories(sim_leds_controller PRIVATE ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS})
 target_link_libraries(sim_leds_controller PRIVATE ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
-target_compile_options(sim_leds_controller PRIVATE -std=c++11)
+target_compile_options(sim_leds_controller PRIVATE -std=c++17)
 
 add_dependencies(sim_leds_controller ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
@@ -55,7 +55,7 @@ add_library(throttling_camera src/throttling_camera.cpp)
 
 target_include_directories(throttling_camera PRIVATE ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS})
 target_link_libraries(throttling_camera PRIVATE ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} CameraPlugin)
-target_compile_options(throttling_camera PRIVATE -std=c++11)
+target_compile_options(throttling_camera PRIVATE -std=c++17)
 
 add_dependencies(throttling_camera ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
