@@ -18,7 +18,6 @@
     <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}]: ${logger}: ${message}"/>
 
     <!-- mavros -->
-    <!-- !!! T265 BRIDGE NODE LAUNCH ALREADY DO THE WORK -->
     <include file="$(find clover)/launch/mavros.launch">
         <arg name="fcu_conn" value="$(arg fcu_conn)"/>
         <arg name="fcu_ip" value="$(arg fcu_ip)"/>
@@ -69,7 +68,7 @@
 
     <!-- rangefinder's frame -->
   <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="rangefinder_frame" args="0 0 -0.05 0 1.5707963268 0 base_link rangefinder" if="$(arg rangefinder_vl53l1x)"/> -->
-  <node pkg="tf2_ros" type="static_transform_publisher" name="rangefinder_frame" args="0 0 -0.05 0 1.5707963268 0 base_link rangefinder" if="$(arg rangefinder_vl53l1x)"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="rangefinder_frame" args="0 0 -0.1 0 0 0 base_link rangefinder" if="$(arg rangefinder_vl53l1x)"/>
 
     <!-- led strip -->
 
