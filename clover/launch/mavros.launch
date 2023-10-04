@@ -6,7 +6,6 @@
     <arg name="viz" default="true"/>
     <arg name="respawn" default="true"/>
     <arg name="distance_sensor_remap" default="rangefinder/range"/>
-
     <arg name="usb_device" default="/dev/ttyACM0"/>
     <arg name="prefix" default="" unless="$(eval fcu_conn == 'usb')"/>
     <arg name="prefix" default="rosrun clover waitfile $(arg usb_device)" if="$(eval fcu_conn == 'usb')"/>
