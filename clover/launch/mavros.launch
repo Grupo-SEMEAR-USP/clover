@@ -2,7 +2,7 @@
     <arg name="fcu_conn" default="usb"/> <!-- options: usb, uart, tcp, udp, sitl, hitl -->
     <arg name="fcu_ip" default="127.0.0.1"/>
     <arg name="fcu_sys_id" default="1"/>
-    <arg name="gcs_bridge" default="tcp"/>
+    <!-- <arg name="gcs_bridge" default="tcp"/> -->
     <arg name="viz" default="true"/>
     <arg name="respawn" default="true"/>
     <arg name="distance_sensor_remap" default="rangefinder/range"/>
@@ -30,11 +30,11 @@
         <param name="target_system_id" value="$(arg fcu_sys_id)" />
 
         <!-- gcs bridge -->
-        <param name="gcs_url" value="tcp-l://0.0.0.0:5760" if="$(eval gcs_bridge == 'tcp')"/>
+        <!-- <param name="gcs_url" value="tcp-l://0.0.0.0:5760" if="$(eval gcs_bridge == 'tcp')"/>
         <param name="gcs_url" value="udp://0.0.0.0:14550@14550" if="$(eval gcs_bridge == 'udp')"/>
         <param name="gcs_url" value="udp-b://$(env ROS_HOSTNAME):14550@14550" if="$(eval gcs_bridge == 'udp-b')"/>
         <param name="gcs_url" value="udp-pb://$(env ROS_HOSTNAME):14550@14550" if="$(eval gcs_bridge == 'udp-pb')"/>
-        <param name="gcs_url" value="" if="$(eval not gcs_bridge)"/>
+        <param name="gcs_url" value="" if="$(eval not gcs_bridge)"/> -->
         <param name="gcs_quiet_mode" value="true"/>
         <param name="conn/timeout" value="8"/>
 
