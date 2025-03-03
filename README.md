@@ -1,3 +1,23 @@
+# ♟️ NRA Fork ♟️
+
+This Clover Fork has the purpose of enabling our quadcopters at NRA to use the Clover package as a high level framework. This framework basically enables some easy to use services and functionalities at a higher level than MavROS and PX4 vanilla. 
+
+Our branch system works as follows: 
+- `harpia-2023` (2023): formerly `CloverJetsonCBR23` renamed to better fit the purpose: adapt clover to harpia. Used in CBR 2023 for the first time.  
+- `Swarm in Blocks` (2023): Following work for Copterhack 2023. 4th place! [CLICK HERE ](https://clover.coex.tech/en/swarm_in_blocks_2.html#table-of-contents)
+- `Swarm in Blocks` (2022): First Swarm in Blocks project for Copterhack 2022. Winners (1st place)! [CLICK HERE](https://clover.coex.tech/en/swarm_in_blocks.html)
+
+Be aware that the Master branch is synced with the original Clover repo, therefore, it's not a good choice to use it, but it should be kept in-sync with the original repo. 
+Feel free to create more branches! 
+
+## VIO
+
+One hot topic in NRA history is the Visual Odometry. The `harpia-2023` is the one that fits the `t265_px4_NRA_bridge` with our VIO.
+
+---
+
+---
+
 # clover🍀: create autonomous drones easily
 
 <img src="docs/assets/clover42-main-margin.png" align="right" width="400px" alt="COEX Clover Drone">
